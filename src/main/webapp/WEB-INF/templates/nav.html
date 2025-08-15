@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="mainNavbar" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" th:href="@{/}">MySpringApp</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li th:classappend="${page == 'home'} ? 'active'">
+        <a th:href="@{/home}">Home</a>
+      </li>
+      <li th:classappend="${page == 'products'} ? 'active'">
+        <a th:href="@{/products}">Products</a>
+      </li>
+      <li th:classappend="${page == 'about'} ? 'active'">
+        <a th:href="@{/about}">About</a>
+      </li>
+      <li th:classappend="${page == 'contact'} ? 'active'">
+        <a th:href="@{/contact}">Contact</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a th:href="@{/auth/login}">Login</a></li>
+      <li><a th:href="@{/auth/register}">Register</a></li>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>

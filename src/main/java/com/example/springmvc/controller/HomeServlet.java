@@ -11,4 +11,8 @@ public class HomeServlet {
     public String showHomePage() {
         return "home-page/home";
     }
+    @GetMapping("/contact")
+    public String showContactPage() {
+        return "home-page/contact";
+    }
 }
