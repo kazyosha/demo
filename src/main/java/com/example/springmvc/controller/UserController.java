@@ -1,6 +1,5 @@
 package com.example.springmvc.controller;
 
-import com.example.springmvc.entity.User;
 import com.example.springmvc.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,8 +18,6 @@ public class UserController {
     }
     @GetMapping("/list")
     public String showListUsers(Model model) {
-        List<User> users = userService.getAllUsers();
-        model.addAttribute("users", users);
         return "user-admin/list";
     }
 }
